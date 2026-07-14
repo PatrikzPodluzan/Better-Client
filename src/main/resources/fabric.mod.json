@@ -1,0 +1,38 @@
+{
+	"schemaVersion": 1,
+	"id": "better-client",
+	"version": "${version}",
+	"name": "Better Client",
+	"description": "This mod can help you with refiling your items while fighting in PvP and also can give you an warning messages if your armor is low on durability!",
+	"authors": [
+		"PatrikzPodluzan"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "Apache 2.0",
+	"icon": "assets/better-client/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"betterclient.mod.BetterClient"
+		],
+		"client": [
+			"betterclient.mod.client.BetterClientClient"
+		]
+	},
+	"mixins": [
+		"better-client.mixins.json",
+		{
+			"config": "better-client.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.19.3",
+		"minecraft": "~1.21.11",
+		"java": ">=21",
+		"fabric-api": "*"
+	}
+}
