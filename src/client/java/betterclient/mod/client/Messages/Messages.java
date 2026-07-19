@@ -24,4 +24,5 @@ public record Messages() {
     public static final Component CHESTPLATE_DURABILITY_WARN_MESSAGE = Component.literal("§a[BetterClient] §cWarning, your chestplate is about to break!");
     public static final Component LEGGINGS_DURABILITY_WARN_MESSAGE = Component.literal("§a[BetterClient] §cWarning, your leggings are about to break!");
     public static final Component BOOTS_DURABILITY_WARN_MESSAGE = Component.literal("§a[BetterClient] §cWarning, your boots are about to break!");
+    public static final Component ITEM_AUTO_REFILL_MESSAGE = Component.literal("§a[BetterClient] §eSetting Auto Item Refill was enabled.");
 }
