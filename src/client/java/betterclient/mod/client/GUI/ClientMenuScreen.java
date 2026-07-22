@@ -19,7 +19,7 @@ public class ClientMenuScreen extends Screen {
         super.init();
 
         Button[] BUTTONS = {
-                ItemAutoRefillButton.createButton(0,0,80,20),
+                ItemAutoRefillButton.createButton(0,0,100,20),
         };
 
         Arrays.stream(BUTTONS).forEach(this::addRenderableWidget);
