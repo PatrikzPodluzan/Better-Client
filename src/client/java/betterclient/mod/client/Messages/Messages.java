@@ -19,10 +19,11 @@ package betterclient.mod.client.Messages;
 import net.minecraft.network.chat.Component;
 
 public record Messages() {
-    public static final Component PLAYER_JOIN_MESSAGE = Component.literal("§a[BetterClient] §bMode loaded!");
+    public static final Component PLAYER_JOIN_MESSAGE = Component.literal("§a[BetterClient] §bMode loaded! Press 'm' to see features of this mod.");
     public static final Component HELMET_DURABILITY_WARN_MESSAGE = Component.literal("§a[BetterClient] §cWarning, your helmet is about to break!");
     public static final Component CHESTPLATE_DURABILITY_WARN_MESSAGE = Component.literal("§a[BetterClient] §cWarning, your chestplate is about to break!");
     public static final Component LEGGINGS_DURABILITY_WARN_MESSAGE = Component.literal("§a[BetterClient] §cWarning, your leggings are about to break!");
     public static final Component BOOTS_DURABILITY_WARN_MESSAGE = Component.literal("§a[BetterClient] §cWarning, your boots are about to break!");
-    public static final Component ITEM_AUTO_REFILL_MESSAGE = Component.literal("§a[BetterClient] §eSetting Auto Item Refill was enabled.");
+    public static final Component ITEM_AUTO_REFILL_ENABLE_MESSAGE = Component.literal("§a[BetterClient] §eSetting Auto Item Refill was enabled.");
+    public static final Component ITEM_AUTO_REFILL_DISABLE_MESSAGE = Component.literal("§a[BetterClient] §eSetting Auto Item Refill was disabled.");
 }

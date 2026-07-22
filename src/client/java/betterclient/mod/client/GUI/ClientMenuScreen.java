@@ -1,4 +1,4 @@
-package betterclient.mod.client.GUI.Screen;
+package betterclient.mod.client.GUI;
 
 import betterclient.mod.client.GUI.Buttons.ItemAutoRefillButton;
 import net.minecraft.client.gui.GuiGraphics;
@@ -11,7 +11,7 @@ import java.util.Arrays;
 
 public class ClientMenuScreen extends Screen {
     public ClientMenuScreen() {
-        super(Component.literal("Client Menu Screen"));
+        super(Component.literal("Better Client Menu"));
     }
 
     @Override
@@ -19,7 +19,7 @@ public class ClientMenuScreen extends Screen {
         super.init();
 
         Button[] BUTTONS = {
-                ItemAutoRefillButton.createButton(0,0,0,0),
+                ItemAutoRefillButton.createButton(0,0,80,20),
         };
 
         Arrays.stream(BUTTONS).forEach(this::addRenderableWidget);
@@ -28,7 +28,5 @@ public class ClientMenuScreen extends Screen {
     @Override
     public void render(@NotNull GuiGraphics graphics, int mouseX, int mouseY, float patrialTick) {
         super.render(graphics,mouseX,mouseY,patrialTick);
-
-        this.renderBackground(graphics,mouseX,mouseY,patrialTick);
     }
 }

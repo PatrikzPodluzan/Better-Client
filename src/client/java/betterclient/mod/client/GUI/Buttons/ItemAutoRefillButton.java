@@ -7,7 +7,7 @@ import net.minecraft.network.chat.Component;
 import org.jetbrains.annotations.NotNull;
 
 public class ItemAutoRefillButton {
-    protected static boolean IS_ACTIVE = false;
+    public static boolean IS_ACTIVE = false;
 
     public static Button createButton(int x,int y,int width,int height) {
         return Button.builder(Component.literal("Item Auto Refill"), new Button.OnPress() {
@@ -16,8 +16,14 @@ public class ItemAutoRefillButton {
                 Minecraft minecraft = Minecraft.getInstance();
 
                 if (minecraft.player != null) {
-                    minecraft.player.displayClientMessage(Messages.ITEM_AUTO_REFILL_MESSAGE,false);
                     IS_ACTIVE = !IS_ACTIVE;
+
+                    if (!IS_ACTIVE) {
+                        minecraft.player.displayClientMessage(Messages.ITEM_AUTO_REFILL_DISABLE_MESSAGE,false);
+                    }
+                    else {
+                        minecraft.player.displayClientMessage(Messages.ITEM_AUTO_REFILL_ENABLE_MESSAGE,false);
+                    }
                 }
             }
         }).bounds(x,y,width,height).build();

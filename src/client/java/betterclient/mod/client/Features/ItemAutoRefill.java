@@ -16,6 +16,7 @@
 
 package betterclient.mod.client.Features;
 
+import betterclient.mod.client.GUI.Buttons.ItemAutoRefillButton;
 import it.unimi.dsi.fastutil.ints.Int2ObjectMaps;
 import net.fabricmc.fabric.api.client.event.lifecycle.v1.ClientTickEvents;
 import net.minecraft.client.Minecraft;
@@ -32,7 +33,7 @@ public class ItemAutoRefill {
         return new ClientTickEvents.StartTick() {
             @Override
             public void onStartTick(@NotNull Minecraft minecraft) {
-                if (minecraft.player != null) {
+                if (minecraft.player != null && ItemAutoRefillButton.IS_ACTIVE) {
                     Item SelectedItem = (minecraft.player.getMainHandItem()).getItem();
                     int ContainerID = minecraft.player.containerMenu.containerId;
 
