@@ -1,5 +1,6 @@
 package betterclient.mod.client.GUI;
 
+import betterclient.mod.client.GUI.Buttons.ArmorDurabilityCheckButton;
 import betterclient.mod.client.GUI.Buttons.ItemAutoRefillButton;
 import net.minecraft.client.gui.GuiGraphics;
 import net.minecraft.client.gui.components.Button;
@@ -20,6 +21,7 @@ public class ClientMenuScreen extends Screen {
 
         Button[] BUTTONS = {
                 ItemAutoRefillButton.createButton(0,0,100,20),
+                ArmorDurabilityCheckButton.createButton(0,25,100,20)
         };
 
         Arrays.stream(BUTTONS).forEach(this::addRenderableWidget);

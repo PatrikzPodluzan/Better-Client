@@ -26,4 +26,6 @@ public record Messages() {
     public static final Component BOOTS_DURABILITY_WARN_MESSAGE = Component.literal("§a[BetterClient] §cWarning, your boots are about to break!");
     public static final Component ITEM_AUTO_REFILL_ENABLE_MESSAGE = Component.literal("§a[BetterClient] §eSetting Auto Item Refill was enabled.");
     public static final Component ITEM_AUTO_REFILL_DISABLE_MESSAGE = Component.literal("§a[BetterClient] §eSetting Auto Item Refill was disabled.");
+    public static final Component ARMOR_DURABILITY_CHECK_ENABLE_MESSAGE = Component.literal("§a[BetterClient] §eSetting Armor Durability Check was enabled.");
+    public static final Component ARMOR_DURABILITY_CHECK_DISABLE_MESSAGE = Component.literal("§a[BetterClient] §eSetting Armor Durability Check was disabled.");
 }
